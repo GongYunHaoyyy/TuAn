@@ -8,11 +8,15 @@
     tools:context=".Activity.LoginActivity"
     android:fitsSystemWindows="true">
 
-    <ImageButton
-        android:background="@drawable/ic_chevron_left_black_24dp"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_margin="2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:padding="@dimen/corner"
+        android:gravity="center"
+        android:layout_margin="@dimen/corner"
+        android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+        android:textSize="18sp"/>
 
     <ImageView
         android:layout_width="72dp"
@@ -27,41 +31,63 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textStyle="bold"
-        android:layout_above="@id/account"
+        android:layout_above="@id/linear_acc"
         android:textSize="18sp"
         android:layout_marginBottom="32dp"
         android:layout_centerHorizontal="true"/>
 
-    <EditText
-        android:id="@+id/account"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_above="@id/password"
-        android:layout_marginBottom="8dp"
-        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+    <LinearLayout
+        android:id="@+id/linear_acc"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:hint="@string/phone_number"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/huge_spacing"
+        android:layout_marginRight="@dimen/huge_spacing"
+        android:background="@drawable/shape_frame">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_centerInParent="true"
-        android:hint="@string/password"
-        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/account"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/scroll_bar_size"
+            android:inputType="number"
+            android:textSize="@dimen/medium_text"
+            android:drawablePadding="@dimen/card_spacing"
+            android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+            android:layout_width="match_parent"
+            android:hint="@string/phone_number"
+            android:layout_margin="@dimen/corner"
+            android:background="@color/transparent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:padding="@dimen/scroll_bar_size"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/medium_text"
+            android:layout_margin="@dimen/corner"
+            android:drawablePadding="@dimen/card_spacing"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/bt_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_below="@id/linear_acc"
+        android:layout_marginLeft="@dimen/huge_spacing"
+        android:layout_marginRight="@dimen/huge_spacing"
+        android:layout_marginTop="@dimen/fab_margin"
         android:text="@string/login"
         android:textColor="@color/ColorWhite"
         android:enabled="false"
@@ -73,7 +99,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="@dimen/big_spacing">
 
         <TextView
             android:id="@+id/tv_register"

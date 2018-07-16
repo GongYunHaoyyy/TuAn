@@ -22,7 +22,7 @@ public class RegisterService implements RegisterProvider{
     public void goToRegister(Activity activity) {
         Intent intentRegister = new Intent( activity, RegisterActivity.class );
         activity.startActivity( intentRegister );
-        activity.finish();
+//        activity.finish();
     }
 
     @Override

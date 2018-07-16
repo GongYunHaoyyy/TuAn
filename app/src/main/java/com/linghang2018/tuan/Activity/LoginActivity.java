@@ -3,6 +3,8 @@ package com.linghang2018.tuan.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -15,9 +17,10 @@ import com.linghang2018.tuan.Utils.LogUtil;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Autowired(name = RouterPath.ROUTE_PATH_REGISTER_SERVICE)
-    RegisterProvider registerService;
-
-    private Button register;
+    private RegisterProvider registerService;
+    private Button login;
+    private EditText phone,password;
+    private TextView register;
     private final String TAG = "LoginActivity";
 
     @Override
@@ -34,11 +37,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Override
     public void initListener() {
         register.setOnClickListener( this );
+        login.setOnClickListener( this );
     }
 
     @Override
     public void findViewById() {
-        register=findViewById( R.id.test_register );
+        register=findViewById( R.id.tv_register );
+        login = findViewById( R.id.bt_login );
+        phone = findViewById( R.id.account );
+        password = findViewById( R.id.password );
     }
 
     @Override
@@ -49,10 +56,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.test_register:
-                LogUtil.d( TAG, "--------->点击了按钮" );
+            case R.id.tv_register:
                 registerService.goToRegister( LoginActivity.this );
                 LogUtil.d( TAG, "--------->调用了registerService" );
+                break;
+            case R.id.bt_login:
+                //登录
                 break;
                 default:
         }

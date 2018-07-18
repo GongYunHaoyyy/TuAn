@@ -1,9 +1,8 @@
-package com.linghang2018.tuan.Activity;
+package com.linghang2018.tuan.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.linghang2018.tuan.Base.BaseActivity;
+import com.linghang2018.tuan.base.BaseActivity;
 import com.linghang2018.tuan.R;
 
 public class MainActivity extends BaseActivity {

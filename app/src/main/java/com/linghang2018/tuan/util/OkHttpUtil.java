@@ -1,4 +1,4 @@
-package com.linghang2018.tuan.Utils;
+package com.linghang2018.tuan.util;
 
 import okhttp3.OkHttpClient;
 

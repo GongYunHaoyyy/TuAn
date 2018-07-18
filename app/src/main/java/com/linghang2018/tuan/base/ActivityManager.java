@@ -1,4 +1,4 @@
-package com.linghang2018.tuan.Base;
+package com.linghang2018.tuan.base;
 
 import android.app.Activity;
 

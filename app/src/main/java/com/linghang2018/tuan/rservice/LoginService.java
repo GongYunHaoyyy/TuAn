@@ -1,12 +1,12 @@
-package com.linghang2018.tuan.RService;
+package com.linghang2018.tuan.rservice;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.linghang2018.tuan.Activity.LoginActivity;
-import com.linghang2018.tuan.Provider.LoginProvider;
+import com.linghang2018.tuan.activity.LoginActivity;
+import com.linghang2018.tuan.provider.LoginProvider;
 import com.linghang2018.tuan.RouterPath;
 
 /**

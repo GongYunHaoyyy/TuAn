@@ -1,4 +1,4 @@
-package com.linghang2018.tuan.Base;
+package com.linghang2018.tuan.base;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -10,6 +10,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
+import com.linghang2018.tuan.base.ActivityManager;
 
 /**
  * @author: Gong Yunhao

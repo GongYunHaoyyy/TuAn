@@ -1,4 +1,4 @@
-package com.linghang2018.tuan.Provider;
+package com.linghang2018.tuan.provider;
 
 import android.app.Activity;
 

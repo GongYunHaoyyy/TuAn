@@ -5,4 +5,7 @@
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="login_problem">登录遇到问题?</string>
+    <string name="main_page">主页</string>
+    <string name="my_page">我的</string>
+    <string name="statistics_page">统计</string>
 </resources>

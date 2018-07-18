@@ -1,4 +1,4 @@
-package com.linghang2018.tuan.Activity;
+package com.linghang2018.tuan.activity;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,15 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.linghang2018.tuan.Base.BaseActivity;
-import com.linghang2018.tuan.Provider.LoginProvider;
-import com.linghang2018.tuan.Provider.MainProvider;
-import com.linghang2018.tuan.Provider.RegisterProvider;
+import com.linghang2018.tuan.base.BaseActivity;
+import com.linghang2018.tuan.provider.MainProvider;
+import com.linghang2018.tuan.provider.RegisterProvider;
 import com.linghang2018.tuan.R;
 import com.linghang2018.tuan.RouterPath;
-import com.linghang2018.tuan.Utils.LogUtil;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
 //    加上下面这句就会出未知的报错，注意
@@ -55,8 +52,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
             @Override
             public void afterTextChanged(Editable editable) {
-                strphone = phone.getText().toString();
-                checkLoginEnable( strphone , strpassword );
+                checkLoginEnable();
             }
         } );
         password.addTextChangedListener( new TextWatcher( ) {
@@ -68,8 +64,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
             @Override
             public void afterTextChanged(Editable editable) {
-                strpassword = password.getText().toString();
-                checkLoginEnable( strphone , strpassword );
+                checkLoginEnable();
             }
         } );
     }
@@ -102,7 +97,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         }
     }
 
-    private void checkLoginEnable(String str1,String str2){
+    private void checkLoginEnable(){
         if (!TextUtils.isEmpty( phone.getText().toString()) && !TextUtils.isEmpty( password.getText().toString() )){
             login.setEnabled( true );
         }else {

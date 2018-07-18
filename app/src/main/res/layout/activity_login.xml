@@ -5,22 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.LoginActivity"
+    tools:context=".activity.LoginActivity"
     android:fitsSystemWindows="true">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:padding="@dimen/corner"
-        android:gravity="center"
-        android:layout_margin="@dimen/corner"
-        android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
-        android:textSize="18sp"/>
 
     <ImageView
         android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_height="66dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/tv_app_name"
         android:src="@drawable/logo"/>
@@ -33,7 +23,7 @@
         android:textStyle="bold"
         android:layout_above="@id/linear_acc"
         android:textSize="18sp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
         android:layout_centerHorizontal="true"/>
 
     <LinearLayout
@@ -48,7 +38,6 @@
 
         <EditText
             android:id="@+id/account"
-            android:layout_marginBottom="8dp"
             android:padding="@dimen/scroll_bar_size"
             android:inputType="number"
             android:textSize="@dimen/medium_text"
@@ -87,7 +76,7 @@
         android:layout_below="@id/linear_acc"
         android:layout_marginLeft="@dimen/huge_spacing"
         android:layout_marginRight="@dimen/huge_spacing"
-        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/big_spacing"
         android:text="@string/login"
         android:textColor="@color/ColorWhite"
         android:enabled="false"
